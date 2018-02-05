@@ -9,7 +9,7 @@ private:
     int capacity = 0;
 public:
     Vec(int);
-    ~Vec();
+//    ~Vec();
     void push_back(int);
     int operator[] (int);
 };
@@ -20,10 +20,10 @@ Vec::Vec(int l)
     this->capacity = l;
 }
 
-Vec::~Vec()
-{
-    delete[] this->data;
-}
+//Vec::~Vec()
+//{
+//    delete[] this->data;
+//}
 
 void Vec::push_back(int n)
 {

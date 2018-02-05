@@ -1,7 +1,7 @@
 # Debugging Demo
 A simple project to be used to demonstrate basic debugging in Qt Creator.
 
-1. Open project in QTC
+1. Open project in QtC
 2. Set a breakpoint in the `push_back` loop.
 3. Run the project in debug.
 4. Open `my_vec` in the memory window. Set the display value for data to array of length 10.
