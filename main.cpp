@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdexcept>
 
 using namespace std;
 
@@ -35,6 +36,7 @@ void Vec::push_back(int n)
 
 int Vec::operator [](int pos)
 {
+    if (pos < 0 || pos > len - 1) throw out_of_range("index out of range");
     return this->data[pos];
 }
 
@@ -53,6 +55,14 @@ int main(int argc, char *argv[])
     for(int i = 0; i < size; i++)
     {
         cout << my_vec[i] << endl;
+    }
+
+    // example of accessing index out of range
+    try {
+        cout << my_vec[10] << endl;
+    }
+    catch (exception& e) {
+        cout << e.what() << endl;
     }
 
     return 0;
